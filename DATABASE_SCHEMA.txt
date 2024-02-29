@@ -1,0 +1,50 @@
+Create database imytraveldb
+
+use imytraveldb
+
+CREATE TABLE `comment` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `date` datetime DEFAULT NULL,
+  `experienceid` bigint DEFAULT NULL,
+  `text` varchar(255) DEFAULT NULL,
+  `userid` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `place_suggestion` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `place_category` varchar(255) DEFAULT NULL,
+  `place_description` varchar(255) DEFAULT NULL,
+  `place_name` varchar(255) DEFAULT NULL,
+  `userid` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `travel_experience` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `accessibility` varchar(255) DEFAULT NULL,
+  `climate` varchar(255) DEFAULT NULL,
+  `cost_of_travel` double NOT NULL,
+  `heritages` varchar(255) DEFAULT NULL,
+  `images` varchar(255) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `places_to_visit` varchar(255) DEFAULT NULL,
+  `safety` varchar(255) DEFAULT NULL,
+  `transportation` varchar(255) DEFAULT NULL,
+  `userid` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `user` (
+  `user_id` bigint NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `role` int DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+
+
